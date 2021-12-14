@@ -1,0 +1,71 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */ 
+
+}
+
+#instruction p {
+    text-align: center !important;
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.invis {
+    visibility: hidden !important;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 8s;
+}
+
+#instruction {
+    position: fixed;
+    width: 100vw;
+    color: white;
+    background-color: black;
+    top: 0;
+    transition-property: all;
+    transition-duration: 8s;
+    
+}
+
+#container {
+    margin: 1em;
+    font-size: 1em;
+}
+
+#title {
+    margin: 1.5em;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+p {
+    min-height: 1em;
+}
+
+.revealed {
+    color: black;
+    transition-property: all;
+    transition-duration: 5s;
+}
+
+span:hover {
+    color: lightgray;
+}
+
+.revealed:hover {
+    color:black !important;
+}

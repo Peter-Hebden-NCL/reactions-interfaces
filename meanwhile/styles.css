@@ -1,0 +1,110 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */ 
+
+}
+
+
+/*Preventing pull down to refresh*/
+body,
+.wrapper {
+  /* Break the flow */
+  position: absolute;
+  top: 0px;
+
+  /* Give them all the available space */
+  width: 100%;
+  height: 100%;
+
+  /* Remove the margins if any */
+  margin: 0;
+
+  /* Allow them to scroll down the document */
+  overflow-y: hidden;
+}
+
+body {
+  /* Sending body at the bottom of the stack */
+  z-index: 1;
+}
+
+.wrapper {
+  /* Making the wrapper stack above the body */
+  z-index: 2;
+}
+
+
+#instruction, #restart {
+    position: absolute;
+    width: 100vw;
+    color: white;
+    background-color: black;
+    bottom: 0;
+    transition-property: all;
+    transition-duration: 1s;
+    
+}
+
+#instruction p, #restart p {
+    text-align: center !important;
+    font-family: sans-serif;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.invis {
+    visibility: hidden !important;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#container {
+    margin: 1em;
+    font-size: 0.5em;
+}
+
+#title {
+    margin: 1.5em;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+p {
+    min-height: 1em;
+    text-align: right;
+}
+
+.seg.b {
+    font-weight: bold;
+}
+
+#title .seg.b {
+    font-weight: normal !important;
+}
+
+.revealed {
+    color: black;
+    transition-property: all;
+    transition-duration: 5s;
+}
+
+span:hover {
+    color: lightgray;
+}
+
+.revealed:hover, #title .revealed .seg.b:hover {
+    color:black !important;
+}
